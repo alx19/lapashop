@@ -1,0 +1,7 @@
+<% @products.each do |product| %>
+  Название: <%= link_to product.name, product %><br>
+  Описание <%= product.description %><br>
+  Цена: <%= product.price_ruble %>р.<br>
+  Количество: <%= product.amount %><br>
+  <br>
+<% end %>

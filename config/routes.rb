@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   devise_for :users
-  get '/' => 'main#index'
+  get '/', to: 'main#index'
+  get 'catalog', to: 'product#index'
   resources :product, only: :show
 end
