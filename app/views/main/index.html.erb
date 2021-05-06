@@ -1,0 +1,25 @@
+<div style="text-align: center;">
+  <h1>Наш ассортимент</h1>
+
+  <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+    <thead>
+      <tr>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Цена</th>
+        <th>Количество</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= link_to product.name, product %></td>
+          <td><%= product.description %></td>
+          <td><%= product.price_ruble %>р.</td>
+          <td><%= product.amount %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
